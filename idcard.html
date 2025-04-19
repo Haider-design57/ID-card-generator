@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ID Card Generator - Your ID Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="idcard-container">
+            <div class="idcard-header">
+                <h1>Your ID Card</h1>
+                <p>Download your ID card by clicking the button below</p>
+            </div>
+            <div class="idcard-preview">
+                <div class="idcard" id="idCard">
+                    <div class="idcard-header">
+                        <h2>Student ID Card</h2>
+                    </div>
+                    <div class="idcard-content">
+                        <div class="idcard-photo">
+                            <img id="studentPhoto" src="" alt="Student Photo" crossorigin="anonymous">
+                        </div>
+                        <div class="idcard-details">
+                            <p>
+                                <strong>Name:</strong>
+                                <span id="studentName"></span>
+                            </p>
+                            <p>
+                                <strong>Roll No:</strong>
+                                <span id="studentRollNo"></span>
+                            </p>
+                            <p>
+                                <strong>Course:</strong>
+                                <span id="studentCourse"></span>
+                            </p>
+                            <p>
+                                <strong>Branch:</strong>
+                                <span id="studentBranch"></span>
+                            </p>
+                            <p>
+                                <strong>Email:</strong>
+                                <span id="studentEmail"></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="idcard-footer">
+                        <p>Valid for Academic Year 2025-2026</p>
+                    </div>
+                </div>
+            </div>
+            <button id="downloadBtn" class="download-btn">
+                Download ID Card
+            </button>
+        </div>
+    </div>
+    <script src="idcard.js"></script>
+</body>
+</html> 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Generator - Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="onboarding-container">
+            <div class="onboarding-content">
+                <h1>Welcome to ID Card Generator</h1>
+                <p>Create your professional student ID card in just a few simple steps</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">📝</div>
+                        <h3>Easy to Use</h3>
+                        <p>Simple and intuitive interface</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Professional Design</h3>
+                        <p>Modern and clean ID card template</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📱</div>
+                        <h3>Instant Download</h3>
+                        <p>Get your ID card in seconds</p>
+                    </div>
+                </div>
+
+                <button id="getStartedBtn" class="get-started-btn">Get Started</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('getStartedBtn').addEventListener('click', () => {
+            window.location.href = 'details.html';
+        });
+    </script>
+</body>
+</html> 

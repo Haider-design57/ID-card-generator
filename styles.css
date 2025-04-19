@@ -1,0 +1,663 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Sign Up Screen Styles */
+.signup-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 40px;
+}
+
+.logo-container h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.logo-container p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.google-btn {
+    background: white;
+    border: 2px solid #4285F4;
+    border-radius: 50px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.google-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.google-btn:hover {
+    background: #4285F4;
+    color: white;
+}
+
+/* Details Screen Styles */
+.details-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: #666;
+}
+
+.student-form {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.photo-group {
+    margin-top: 10px;
+}
+
+.photo-hint {
+    display: block;
+    color: #666;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.image-preview {
+    width: 120px;
+    height: 150px;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 10px 0;
+    background: #f8f9fa;
+}
+
+.image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Form Group Base Styles */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    color: #333;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background: #fff;
+}
+
+.form-group input:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #aaa;
+}
+
+.generate-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.generate-btn:hover {
+    background: #764ba2;
+}
+
+/* ID Card Screen Styles */
+.idcard-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.idcard-header {
+    margin-bottom: 30px;
+}
+
+.idcard-header h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.idcard-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.idcard-preview {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.idcard {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 20px;
+    padding: 30px;
+    width: 550px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.idcard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    z-index: 0;
+}
+
+.idcard-header h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+}
+
+.idcard-content {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    align-items: flex-start;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+}
+
+.idcard-photo {
+    width: 110px;
+    height: 140px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid white;
+    position: relative;
+    background: #fff;
+    margin-right: 20px;
+}
+
+.idcard-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    background: #fff;
+}
+
+.idcard-details {
+    flex: 1;
+    text-align: left;
+    padding: 0;
+}
+
+.idcard-details p {
+    margin-bottom: 12px;
+    color: #333;
+    font-size: 1.1rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.idcard-details strong {
+    color: #667eea;
+    font-weight: 600;
+    min-width: 80px;
+}
+
+.idcard-details span {
+    color: #444;
+    font-weight: 500;
+}
+
+.idcard-footer {
+    border-top: 2px solid rgba(102, 126, 234, 0.1);
+    padding-top: 15px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Splash Screen Styles */
+.splash-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.splash-content {
+    color: white;
+}
+
+.splash-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+.designer-text {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.highlight {
+    color: #ffd700;
+    font-weight: 600;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Onboarding Screen Styles */
+.onboarding-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.onboarding-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.onboarding-content h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.onboarding-content p {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.feature {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.get-started-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.get-started-btn:hover {
+    background: #764ba2;
+    transform: translateY(-2px);
+}
+
+/* Common Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .details-container,
+    .idcard-container {
+        padding: 20px;
+        margin: 10px;
+        width: 100%;
+    }
+
+    .form-header h1,
+    .idcard-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-header p,
+    .idcard-header p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-header h1,
+    .idcard-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .student-form {
+        gap: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form-group input {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .generate-btn,
+    .download-btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* ID Card Responsive Styles */
+@media screen and (max-width: 600px) {
+    .idcard {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .idcard-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .idcard-photo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .idcard-details {
+        width: 100%;
+    }
+
+    .idcard-details p {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .idcard-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .details-container {
+        padding: 15px;
+        margin: 10px;
+        width: calc(100% - 20px);
+        box-sizing: border-box;
+    }
+
+    .form-group input {
+        font-size: 16px; /* Better for mobile input */
+        padding: 10px;
+    }
+
+    .image-preview {
+        width: 100px;
+        height: 130px;
+        margin: 10px auto;
+    }
+
+    .photo-hint {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    input[type="file"] {
+        width: 100%;
+        max-width: 100%;
+        font-size: 14px;
+    }
+}
+
+/* Details Page Responsive Styles */
+@media screen and (max-width: 600px) {
+    .details-container {
+        padding: 15px;
+        width: 100%;
+        max-width: 100%;
+        margin: 10px auto;
+        border-radius: 15px;
+    }
+
+    .student-form {
+        width: 100%;
+        padding: 0;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .form-group input {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .container {
+        padding: 10px;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* iPhone SE and Similar Small Devices */
+@media screen and (max-width: 375px) {
+    .details-container {
+        padding: 12px;
+        margin: 5px;
+    }
+
+    .form-header h1 {
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+    }
+
+    .form-header p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input {
+        padding: 8px;
+        font-size: 15px;
+    }
+
+    .generate-btn {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Ensure minimum width for very small screens */
+@media screen and (max-width: 320px) {
+    .container {
+        padding: 5px;
+    }
+
+    .idcard-details p {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .idcard-details strong {
+        min-width: auto;
+    }
+} 
